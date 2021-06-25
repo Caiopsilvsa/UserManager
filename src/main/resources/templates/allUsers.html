@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://thymeleaf.org">
+
+<head>
+<meta >
+ 
+   <link  href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<title>Insert title here</title>
+</head>
+<body>
+ <div>
+    <header>
+        <nav class="navbar navbar-light bg-light" >
+            <span class="navbar-brand mb-0 h1" style="font-weight: bold; 	">UserManager</span>
+        
+         </nav> 
+  
+  </header>
+</div>
+<div class="container"  style="width: 60%; padding-bottom: 60px;position:relative;top:100px">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="background-color: white; padding-left: 0px;">
+                <li class="breadcrumb-item active" aria-current="page">Lista de Usuarios</li>
+            </ol>
+        </nav>
+       </div>
+       
+           <table class="table table-dark table-striped" style="width: 60%; position:absolute; top:200px;	left:200px;"th:each="user:${allUsers}">
+  <thead>
+    <tr>
+     
+      
+      <th scope="col">NOME</th>
+      <th scope="col">NOME</th>
+       <th scope="col">IDADE</th>
+       <th scope="col">TELEFONE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td th:text="${user.name}">Mark</td>
+      <td th:text="${user.age}">Otto</td>
+      <td th:text="${user.phone}">@mdo</td>
+      <td th:text="${user.adress}">zz</td>
+    </tr>
+  
+    <div class = "adcionar" style = "position:relative;left:500px;top:370px" >
+       <button type="button" class="btn btn-primary btn-lg">Adicionar Usuario</button>
+<button type="button" class="btn btn-secondary btn-lg">Excluir Usuario</button>
+</div>
+  </tbody>
+      
+
+</table>
+      
+      
+
+
+
+
+</body>
+</html>
