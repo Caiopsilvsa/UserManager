@@ -8,6 +8,7 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.projeto</groupId>
 	<artifactId>UserManager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -46,12 +47,36 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+	
+	
+	
 	</dependencies>
 	
 	
 
 	<build>
 		<plugins>
+		<plugin>
+        <groupId>com.jcabi</groupId>
+        <artifactId>jcabi-heroku-maven-plugin</artifactId>
+        <version>0.8</version>
+        <configuration>
+          <server>heroku.com</server> <!-- name from settings.xml -->
+          <name>UserManager</name>
+          <artifacts>
+            <artifact>${project.com.projeto}:${project.UserManager}:jar::${project.0.0.1-SNAPSHOT}</artifact>
+          </artifacts>
+          <procfile>web: java -Xmx256m -jar ./${project.UserManager}.jar ${PORT}</procfile>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+			
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

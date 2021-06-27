@@ -1,0 +1,6 @@
+com\projeto\UserManager\UserManagerApplication.class
+com\projeto\UserManager\repository\UserRepository.class
+com\projeto\UserManager\controllers\OlaMundoController.class
+com\projeto\UserManager\Models\User.class
+com\projeto\UserManager\controllers\UserController.class
+com\projeto\UserManager\Services\UserService.class
