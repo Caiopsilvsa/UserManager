@@ -30,6 +30,9 @@ public class UserController {
 		
 	}
 
+	
+	
+	
 	@GetMapping("user/{id}")
 	public User UserById(@PathVariable("id")Long id){
 	   
